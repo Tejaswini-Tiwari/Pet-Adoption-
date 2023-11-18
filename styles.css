@@ -1,0 +1,165 @@
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=PT+Serif:ital@1&display=swap');
+
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+background-color: gainsboro;
+    font-family: 'PT Serif', serif;
+    }
+
+.hero{
+    background-color: rgb(134, 184, 186);
+    color: antiquewhite;
+    padding: 50px 30px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+.hero:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background:linear-gradient(to left,rgb(134, 184, 186),rgb(36, 173, 177) );
+}
+
+.hero:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background:linear-gradient(to right,rgb(134, 184, 186),rgb(36, 173, 177) );
+}
+
+.hero h1{
+    font-weight: normal;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero h2{
+    font-weight: normal;
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+.filter-nav{
+    justify-content: center;
+    display: flex;
+}
+
+.filter-nav a{
+    text-decoration: none;
+    padding: 9px;
+    border-radius: 4px;
+    color: rgb(78, 122, 124);
+    border: 2px solid rgb(153, 184, 185);
+    margin: 4px;
+}
+
+.filter-nav a:hover {
+    background-color: rgb(187, 201, 202);
+}
+
+.filter-nav .active {
+    background-color: rgb(33, 99, 102);
+    color: antiquewhite;
+}
+
+.filter-nav .active:hover {
+    background-color: rgb(33, 99, 102);
+    cursor: default;
+}
+
+.animals {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.animals-card{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 100%;
+    background-color:whitesmoke;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.animals-card-photo{
+    order: 1;
+    grid-row: 1;
+    overflow: hidden;
+}
+
+.animals-card-photo img{
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease-in-out;
+}
+
+.animals-card:hover img {
+    transform: rotate(20deg) scale(1.4);
+}
+
+.animals-card-text {
+    padding: 20px 25px;
+}
+
+.animals-card-text h3{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: 1.8rem;
+}
+
+.animals-card-text small{
+    color: rgb(175, 175, 175);
+}
+
+.animals-card-text p {
+    margin: .8rem 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.primary-btn {
+    background:linear-gradient(to right,rgb(134, 184, 186),rgb(36, 173, 177) );
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    color: antiquewhite;
+}
+
+.primary-btn:hover {
+    background:linear-gradient(to right,rgb(134, 184, 186),rgb(33, 99, 102) );
+}
+
+.only-large-screen {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .animals-card {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .hero h1 {
+        font-size: 6rem;
+    }
+    .only-large-screen {
+        display: inline;
+    }
+
+}
